@@ -1,7 +1,7 @@
 /* Define color variables for easy theming */
 :root {
   --color-bg-dark: #121212;
-  --color-bg-darker: #0a0a0a;
+  --color-bg-darker: #161616;
   --color-bg-alt-dark: #1a1a1a;
   --color-text-light: #e0e0e0;
   --color-text-white: #ffffff;
@@ -177,7 +177,7 @@ a:hover {
 
 .card:hover {
     transform: translateY(-5px);
-    background-color: #363232; /* You can convert this to variable if you want */
+    background-color: #252525; /* You can convert this to variable if you want */
     box-shadow: 0 10px 25px var(--color-shadow-dark-strong);
 }
 
