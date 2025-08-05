@@ -24,62 +24,37 @@
     </header>
 
     <section id="about" class="section-padding">
-        <div class="container about-content">
-            <img src="media/photo.jpeg" alt="Nima Peykarimeh" class="profile-pic rounded-full shadow-lg">
-            <div class="about-text">
-                <h2 class="section-title">About Me</h2>
-                <p>
-                    Hi! I'm <strong>Nima Peykarimeh</strong>, a passionate game developer specializing in Unity. I create high-quality tools and assets to help other developers build better games.
-                </p>
-                <p>
-                    I thrive on crafting creative, immersive experiences for players. I’ve published on platforms like Steam, Unity Asset Store, and itch.io. I value smart tools, clever design, and solid polish.
-                </p>
-            </div>
-        </div>
-    </section>
+  <div class="container">
+    <h2 class="section-title">About Me</h2> <!-- Moved outside -->
+    <div class="about-content">
+      <img src="media/photo.jpeg" alt="Nima Peykarimeh" class="profile-pic rounded-full shadow-lg">
+      <div class="about-text">
+        <p>
+          Hi! I'm <strong>Nima Peykarimeh</strong>, a passionate game developer specializing in Unity. I create high-quality tools and assets to help other developers build better games.
+        </p>
+        <p>
+          I thrive on crafting creative, immersive experiences for players. I’ve published on platforms like Steam, Unity Asset Store, and itch.io. I value smart tools, clever design, and solid polish.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section id="steam-games" class="section-padding bg-dark-alt">
-        <div class="container">
-            <h2 class="section-title">My Steam Games</h2>
-            <div class="game-showcase">
-                <div class="game-item card">
-                    <div class="media-wrapper">
-                        <iframe src="https://www.youtube.com/embed/EnvD3vXdlyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.600x338.jpg?t=1753465831" alt="Penny for Your Potion" class="game-image">
-                    </div>
-                    <h3 class="game-title">Penny for Your Potion</h3>
-                    <p class="game-description">A cozy yet mysterious potion-making simulation game. Serve whimsical customers, uncover secrets, and build your own magical potion shop.</p>
-                    
-                    <a href="https://store.steampowered.com/app/3560010/Penny_for_Your_Potion/" class="button" target="_blank" rel="noopener noreferrer">View on Steam</a>
-                </div>
-            </div>
+    <div class="container">
+        <h2 class="section-title">My Steam Games</h2>
+        <div id="steam-game-content-area">
+            <!-- The content for the game showcase and details will be generated here by JavaScript -->
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="unity-assets" class="section-padding">
         <div class="container">
             <h2 class="section-title">My Unity Asset Store Assets</h2>
             <div class="grid-container">
-                <div class="grid-item card">
-                    <img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/598fe0d0-9534-4feb-9b28-97f61624bdcf.webp" alt="Quick Prefab Painter" class="asset-image">
-                    <h3 class="asset-title">Quick Prefab Painter</h3>
-                    <p class="asset-description">A fast and easy-to-use tool for painting prefabs in your Unity scenes.</p>
-                    <a href="https://assetstore.unity.com/packages/tools/quick-prefab-painter" class="button" target="_blank" rel="noopener noreferrer">View on Asset Store</a>
-                </div>
-
-                <div class="grid-item card">
-                    <img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/088ba073-04bc-4f6c-b971-72a0a2a5a324.webp" alt="Complete Flashlight System" class="asset-image">
-                    <h3 class="asset-title">Complete Flashlight System</h3>
-                    <p class="asset-description">A modular and customizable flashlight system for Unity with battery management and effects.</p>
-                    <a href="https://assetstore.unity.com/packages/tools/complete-flashlight-system" class="button" target="_blank" rel="noopener noreferrer">View on Asset Store</a>
-                </div>
-
-                <div class="grid-item card">
-                    <img src="https://assetstorev1-prd-cdn.unity3d.com/key-image/a331e081-fc11-48a0-8b0b-127c259a3121.webp" alt="Ultimate 2D Platformer Toolkit" class="asset-image">
-                    <h3 class="asset-title">Ultimate 2D Platformer Toolkit</h3>
-                    <p class="asset-description">A comprehensive 2D platformer framework with smooth movement, enemies, pickups, and more.</p>
-                    <a href="https://assetstore.unity.com/packages/tools/ultimate-2d-platformer-toolkit" class="button" target="_blank" rel="noopener noreferrer">View on Asset Store</a>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -87,43 +62,8 @@
     <section id="itch-games" class="section-padding bg-dark-alt">
         <div class="container">
             <h2 class="section-title">My Itch.io Games</h2>
-            <div class="grid-container">
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzIwNDMyODQ1LnBuZw==/315x250%23c/qg7DDU.png" alt="Cosmic Blast" class="game-image">
-                    <h3 class="game-title">Cosmic Blast</h3>
-                    <p class="game-description">Shooter | Play in browser</p>
-                    <a href="https://nimapeykarimeh.itch.io/cosmic-blast" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzE2MjMxNzA3LmpwZw==/315x250%23c/9pSXy0.jpg" alt="Unity Defender" class="game-image">
-                    <h3 class="game-title">Unity Defender</h3>
-                    <p class="game-description">Shooter | Windows download</p>
-                    <a href="https://nimapeykarimeh.itch.io/unity-defender" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzE2MzI0NDUxLmdpZg==/315x250%23cm/MUw%2BGU.gif" alt="Zombie Alien" class="game-image">
-                    <h3 class="game-title">Zombie Alien</h3>
-                    <p class="game-description">Windows download</p>
-                    <a href="https://nimapeykarimeh.itch.io/zombie-alien" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzE3MzI1OTU4LnBuZw==/315x250%23c/eGnihc.png" alt="Catastrophy" class="game-image">
-                    <h3 class="game-title">Catastrophy</h3>
-                    <p class="game-description">Simulation | Windows download</p>
-                    <a href="https://alren54.itch.io/catastrophy" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzk1OTc4ODcucG5n/315x250%23c/BFnw8q.png" alt="Sticky Dice" class="game-image">
-                    <h3 class="game-title">Sticky Dice</h3>
-                    <p class="game-description">Puzzle | Play in browser | Windows download</p>
-                    <a href="https://nimapeykarimeh.itch.io/sticky-dice" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
-                <div class="grid-item card">
-                    <img src="https://img.itch.zone/aW1nLzE1OTQyNzk5LnBuZw==/315x250%23c/B8oGk9.png" alt="İskir" class="game-image">
-                    <h3 class="game-title">İskir</h3>
-                    <p class="game-description">Survival | Windows download</p>
-                    <a href="https://kollessisopod.itch.io/iskir" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
-                </div>
+            <div class="grid-container" id="itch-games-container">
+                
             </div>
         </div>
     </section>
