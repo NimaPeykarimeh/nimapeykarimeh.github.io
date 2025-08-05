@@ -6,6 +6,7 @@
     --color-text-light: #e0e0e0;
     --color-text-white: #ffffff;
     --color-text-muted: #b0b0b0;
+    --color-border:rgba(255, 255, 255, 0.2);
     --color-accent: #d22b2b; /* bright red */
     --color-accent-hover: #a21e1e; /* deeper red */
     --color-link-hover: #ffffff; /* keep white on hover */
@@ -101,6 +102,7 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .section-padding {
@@ -200,8 +202,10 @@ a:hover {
     align-items: center;
     justify-content: space-between; /* Distribute space */
     border: 1px solid;
-    border-color: var(--color-text-muted);
+    border-color: var(--color-border);
     transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+
+    
 }
 
 .grid-item:hover {
@@ -217,11 +221,13 @@ a:hover {
 
 /* About Me Section */
 #about .section-title {
+    
     text-align: center;
 
 }
 
 #about .about-content {
+    
     display: flex;
     flex-direction: row; /* Desktop: side by side */
     align-items: center;
@@ -241,11 +247,22 @@ a:hover {
 .about-text {
     flex: 1;
     max-width: 800px;
-    border: 1px solid #ffffff;
+    
+    background: rgba(114, 114, 114, 0.1);
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: var(--color-border);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+
+    /* border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 15px;
-    background-color: var(--color-bg-alt-dark);
-    box-shadow: 0 0px 15px  var(--color-shadow-dark);
+    backdrop-filter: blur(5px);
+    background: rgb(27, 27, 27);
+    box-shadow: 0 0px 15px  var(--color-shadow-dark); */
+    
+    /* background-color: var(--color-bg-alt-dark); */
 }
 
 
