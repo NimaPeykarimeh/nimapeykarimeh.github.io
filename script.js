@@ -85,15 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 {
                     type: 'image',
-                    url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.600x338.jpg?t=1753465831',
+                    url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.1920x1080.jpg?t=1753465831',
                     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.600x338.jpg?t=1753465831',
                     altText: 'Penny for Your Potion Screenshot 1'
                 },
                 {
                     type: 'image',
-                    url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/a4e4f2267d9b6d840a04385ee914234acff0feda/ss_a4e4f2267d9b6d840a04385ee914234acff0feda.600x338.jpg?t=1753465831',
+                    url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/a4e4f2267d9b6d840a04385ee914234acff0feda/ss_a4e4f2267d9b6d840a04385ee914234acff0feda.1920x1080.jpg?t=1753465831',
                     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/a4e4f2267d9b6d840a04385ee914234acff0feda/ss_a4e4f2267d9b6d840a04385ee914234acff0feda.600x338.jpg?t=1753465831',
                     altText: 'Penny for Your Potion Screenshot 2'
+                },
+                {
+                    type: 'image',
+                    url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/6428be39415ddd6a744ae9b20650f37e872920d6/ss_6428be39415ddd6a744ae9b20650f37e872920d6.1920x1080.jpg?t=1753465831',
+                    thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/6428be39415ddd6a744ae9b20650f37e872920d6/ss_6428be39415ddd6a744ae9b20650f37e872920d6.600x338.jpg?t=1753465831',
+                    altText: 'Penny for Your Potion Screenshot 3'
                 }
             ]
         }
@@ -188,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div class="thumbnail-list">
     ${thumbnailsHtml}
+    
     </div>
     </div>
     
@@ -249,4 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateItchGames();
     generateUnityAssetCards();
     generateSteamGames(); // Call the new function here
+    particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
 });
