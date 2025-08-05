@@ -256,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateItchGames();
     generateUnityAssetCards();
     generateSteamGames(); // Call the new function here
+    particlesJS.load('particles-unity-assets', 'particles.json');
     particlesJS.load('particles-js', 'particles.json', function() {
   console.log('particles.js loaded - callback');
 });
