@@ -509,7 +509,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+
         gap: 15px;
     }
 
@@ -548,7 +548,7 @@ a:hover {
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
 
     .nav-links {
@@ -591,7 +591,7 @@ a:hover {
     z-index: 1101;
     margin-left: 10px;
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 20px;
 }
 .menu-toggle .bar {
