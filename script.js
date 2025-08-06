@@ -1,113 +1,145 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ... (existing smooth scrolling and other initial logic) ...
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-    // Data for Itch.io Games
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Data for Itch.io Games (with translations)
     const itchGames = [
         {
             imgSrc: "https://img.itch.zone/aW1nLzIwNDMyODQ1LnBuZw==/315x250%23c/qg7DDU.png",
-            altText: "Cosmic Blast",
-            title: "Cosmic Blast",
-            genre: "Shooter | Play in browser",
+            altText: { en: "Cosmic Blast", tr: "Cosmic Blast" },
+            title: { en: "Cosmic Blast", tr: "Cosmic Blast" },
+            genre: { en: "Shooter | Play in browser", tr: "Nişancı | Tarayıcıda Oyna" },
             link: "https://nimapeykarimeh.itch.io/cosmic-blast"
         },
         {
             imgSrc: "https://img.itch.zone/aW1nLzE2MjMxNzA3LmpwZw==/315x250%23c/9pSXy0.jpg",
-            altText: "Unity Defender",
-            title: "Unity Defender",
-            genre: "Shooter | Windows download",
+            altText: { en: "Unity Defender", tr: "Unity Defender" },
+            title: { en: "Unity Defender", tr: "Unity Defender" },
+            genre: { en: "Shooter | Windows download", tr: "Nişancı | Windows indir" },
             link: "https://nimapeykarimeh.itch.io/unity-defender"
         },
         {
             imgSrc: "https://img.itch.zone/aW1nLzE2MzI0NDUxLmdpZg==/315x250%23cm/MUw%2BGU.gif",
-            altText: "Zombie Alien",
-            title: "Zombie Alien",
-            genre: "Windows download",
+            altText: { en: "Zombie Alien", tr: "Zombie Alien" },
+            title: { en: "Zombie Alien", tr: "Zombie Alien" },
+            genre: { en: "Windows download", tr: "Windows indir" },
             link: "https://nimapeykarimeh.itch.io/zombie-alien"
         },
         {
             imgSrc: "https://img.itch.zone/aW1nLzE3MzI1OTU4LnBuZw==/315x250%23c/eGnihc.png",
-            altText: "Catastrophy",
-            title: "Catastrophy",
-            genre: "Simulation | Windows download",
+            altText: { en: "Catastrophy", tr: "Catastrophy" },
+            title: { en: "Catastrophy", tr: "Catastrophy" },
+            genre: { en: "Simulation | Windows download", tr: "Simülasyon | Windows indir" },
             link: "https://alren54.itch.io/catastrophy"
         },
         {
             imgSrc: "https://img.itch.zone/aW1nLzk1OTc4ODcucG5n/315x250%23c/BFnw8q.png",
-            altText: "Sticky Dice",
-            title: "Sticky Dice",
-            genre: "Puzzle | Play in browser | Windows download",
+            altText: { en: "Sticky Dice", tr: "Sticky Dice" },
+            title: { en: "Sticky Dice", tr: "Sticky Dice" },
+            genre: { en: "Puzzle | Play in browser | Windows download", tr: "Bulmaca | Tarayıcıda Oyna | Windows indir" },
             link: "https://nimapeykarimeh.itch.io/sticky-dice"
         },
         {
             imgSrc: "https://img.itch.zone/aW1nLzE1OTQyNzk5LnBuZw==/315x250%23c/B8oGk9.png",
-            altText: "İskir",
-            title: "İskir",
-            genre: "Survival | Windows download",
+            altText: { en: "İskir", tr: "İskir" },
+            title: { en: "İskir", tr: "İskir" },
+            genre: { en: "Survival | Windows download", tr: "Hayatta Kalma | Windows indir" },
             link: "https://kollessisopod.itch.io/iskir"
         }
     ];
 
-    // Data for Unity Assets
+    // Data for Unity Assets (with translations)
     const myUnityAssets = [
         {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/598fe0d0-9534-4feb-9b28-97f61624bdcf.webp",
-            title: "Quick Prefab Painter",
-            description: "A fast and easy-to-use tool for painting prefabs in your Unity scenes.",
+            title: { en: "Quick Prefab Painter", tr: "Hızlı Prefab Boyama" },
+            description: {
+                en: "A fast and easy-to-use tool for painting prefabs in your Unity scenes.",
+                tr: "Unity sahnelerinizde prefabları hızlıca boyamak için kolay bir araç."
+            },
             assetUrl: "https://assetstore.unity.com/packages/slug/315001"
         },
         {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/088ba073-04bc-4f6c-b971-72a0a2a5a324.webp",
-            title: "Complete Flashlight System",
-            description: "A modular and customizable flashlight system for Unity with battery management and effects.",
+            title: { en: "Complete Flashlight System", tr: "Tam Fener Sistemi" },
+            description: {
+                en: "A modular and customizable flashlight system for Unity with battery management and effects.",
+                tr: "Pil yönetimi ve efektlerle modüler, özelleştirilebilir bir Unity fener sistemi."
+            },
             assetUrl: "https://assetstore.unity.com/packages/slug/327109"
         },
         {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/a331e081-fc11-48a0-8b0b-127c259a3121.webp",
-            title: "Ultimate 2D Platformer Toolkit",
-            description: "A comprehensive 2D platformer framework with smooth movement, enemies, pickups, and more.",
+            title: { en: "Ultimate 2D Platformer Toolkit", tr: "Ultimate 2D Platformer Araç Seti" },
+            description: {
+                en: "A comprehensive 2D platformer framework with smooth movement, enemies, pickups, and more.",
+                tr: "Akıcı hareket, düşmanlar, toplama nesneleri ve daha fazlasını içeren kapsamlı bir 2D platformer altyapısı."
+            },
             assetUrl: "https://assetstore.unity.com/packages/slug/328245"
         }
     ];
 
-    // Data for Steam Games
+    // Data for Steam Games (with translations)
     const steamGamesData = [
         {
-            title: "Penny for Your Potion",
-            logoSrc: "media/Logo.png", // Assuming this is a local path to your logo
-            description: "Welcome to Penny for Your Potion! Customize your shop, manage your garden and brew potions for your customers to discover new ingredients, recipes and secrets in this medieval management game. Build the store of your dreams, grow your reputation and become the greatest alchemist in history!",
+            title: { 
+                en: "Penny for Your Potion", 
+                tr: "İksirine Bir Kuruş" 
+            },
+            logoSrc: "media/Logo.png",
+            description: {
+                en: "Welcome to Penny for Your Potion! Customize your shop, manage your garden and brew potions for your customers to discover new ingredients, recipes and secrets in this medieval management game. Build the store of your dreams, grow your reputation and become the greatest alchemist in history!",
+                tr: "Penny for Your Potion'a hoş geldiniz! Dükkanınızı özelleştirin, bahçenizi yönetin ve müşterileriniz için iksirler hazırlayarak yeni malzemeler, tarifler ve sırlar keşfedin. Hayalinizdeki mağazayı kurun, itibarınızı artırın ve tarihin en büyük simyacısı olun!"
+            },
             steamUrl: "https://store.steampowered.com/app/3560010/Penny_for_Your_Potion/",
             media: [
                 {
                     type: 'video',
-                    url: 'https://www.youtube.com/embed/EnvD3vXdlyI', // YouTube embed URL
-                    thumbnail: 'https://img.youtube.com/vi/EnvD3vXdlyI/hqdefault.jpg', // Thumbnail for the video
-                    altText: 'Penny for Your Potion Trailer'
+                    url: 'https://www.youtube.com/embed/EnvD3vXdlyI',
+                    thumbnail: 'https://img.youtube.com/vi/EnvD3vXdlyI/hqdefault.jpg',
+                    altText: { en: 'Penny for Your Potion Trailer', tr: 'Penny for Your Potion Fragman' }
                 },
                 {
                     type: 'image',
                     url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.1920x1080.jpg?t=1753465831',
                     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/11c7b4e9d0b726edf7e217a726e0bff80076e504/ss_11c7b4e9d0b726edf7e217a726e0bff80076e504.600x338.jpg?t=1753465831',
-                    altText: 'Penny for Your Potion Screenshot 1'
+                    altText: { en: 'Penny for Your Potion Screenshot 1', tr: 'Penny for Your Potion Ekran Görüntüsü 1' }
                 },
                 {
                     type: 'image',
                     url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/a4e4f2267d9b6d840a04385ee914234acff0feda/ss_a4e4f2267d9b6d840a04385ee914234acff0feda.1920x1080.jpg?t=1753465831',
                     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/a4e4f2267d9b6d840a04385ee914234acff0feda/ss_a4e4f2267d9b6d840a04385ee914234acff0feda.600x338.jpg?t=1753465831',
-                    altText: 'Penny for Your Potion Screenshot 2'
+                    altText: { en: 'Penny for Your Potion Screenshot 2', tr: 'Penny for Your Potion Ekran Görüntüsü 2' }
                 },
                 {
                     type: 'image',
                     url: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/6428be39415ddd6a744ae9b20650f37e872920d6/ss_6428be39415ddd6a744ae9b20650f37e872920d6.1920x1080.jpg?t=1753465831',
                     thumbnail: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3560010/6428be39415ddd6a744ae9b20650f37e872920d6/ss_6428be39415ddd6a744ae9b20650f37e872920d6.600x338.jpg?t=1753465831',
-                    altText: 'Penny for Your Potion Screenshot 3'
+                    altText: { en: 'Penny for Your Potion Screenshot 3', tr: 'Penny for Your Potion Ekran Görüntüsü 3' }
                 }
             ]
         }
-        // You can add more Steam games here if you want to expand this section later
     ];
 
+    // Track current language
+    let currentLang = 'en';
+
     // Function to generate Itch.io Games HTML
-    function generateItchGames() {
+    function generateItchGames(lang = currentLang) {
         const container = document.getElementById('itch-games-container');
         if (!container) {
             console.error("Itch.io games container not found! Check your HTML ID.");
@@ -119,11 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
             htmlContent += `
                 <div class="grid-item card">
                     <a href="${game.link}" target="_blank" rel="noopener noreferrer">
-                        <img src="${game.imgSrc}" alt="${game.altText}" class="game-image" />
-                        <h3 class="game-title">${game.title}</h3>
+                        <img src="${game.imgSrc}" alt="${game.altText[lang]}" class="game-image" />
+                        <h3 class="game-title">${game.title[lang]}</h3>
                     </a>
-                    <p class="game-description">${game.genre}</p>
-                    <a href="${game.link}" class="button" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
+                    <p class="game-description">${game.genre[lang]}</p>
+                    <a href="${game.link}" class="button" target="_blank" rel="noopener noreferrer">${lang === 'tr' ? 'Itch.io\'da Oyna' : 'Play on Itch.io'}</a>
                 </div>
             `;
         });
@@ -131,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to generate Unity Asset Cards
-    function generateUnityAssetCards() {
+    function generateUnityAssetCards(lang = currentLang) {
         const gridContainer = document.querySelector('.grid-container');
         if (!gridContainer) {
             console.error('The element with class "grid-container" was not found.');
@@ -143,10 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
         myUnityAssets.forEach(asset => {
             const cardHtml = `
                 <div class="grid-item card">
-                    <img src="${asset.imageSrc}" alt="${asset.title}" class="asset-image">
-                    <h3 class="asset-title">${asset.title}</h3>
-                    <p class="asset-description">${asset.description}</p>
-                    <a href="${asset.assetUrl}" class="button" target="_blank" rel="noopener noreferrer">View on Asset Store</a>
+                    <img src="${asset.imageSrc}" alt="${asset.title[lang]}" class="asset-image">
+                    <h3 class="asset-title">${asset.title[lang]}</h3>
+                    <p class="asset-description">${asset.description[lang]}</p>
+                    <a href="${asset.assetUrl}" class="button" target="_blank" rel="noopener noreferrer">${lang === 'tr' ? 'Asset Store\'da Görüntüle' : 'View on Asset Store'}</a>
                 </div>
             `;
             gridContainer.innerHTML += cardHtml;
@@ -154,74 +186,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to generate Steam Games HTML
-    function generateSteamGames() {
-    const contentArea = document.getElementById('steam-game-content-area');
-    if (!contentArea) {
-        console.error("Steam game content area not found! Please add <div id='steam-game-content-area'></div> inside your Steam section's container.");
-        return;
-    }
+    function generateSteamGames(lang = currentLang) {
+        const contentArea = document.getElementById('steam-game-content-area');
+        if (!contentArea) {
+            console.error("Steam game content area not found! Please add <div id='steam-game-content-area'></div> inside your Steam section's container.");
+            return;
+        }
 
-    const gameData = steamGamesData[0];
+        const gameData = steamGamesData[0];
 
-    if (!gameData) {
-        console.warn("No Steam game data available to generate.");
-        return;
-    }
+        if (!gameData) {
+            console.warn("No Steam game data available to generate.");
+            return;
+        }
 
-    let mainMediaHtml = '';
-    if (gameData.media[0].type === 'video') {
-        mainMediaHtml = `<iframe id="main-video" src="${gameData.media[0].url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    } else {
-        mainMediaHtml = `<img id="main-image" src="${gameData.media[0].url}" alt="${gameData.media[0].altText}">`;
-    }
+        let mainMediaHtml = '';
+        if (gameData.media[0].type === 'video') {
+            mainMediaHtml = `<iframe id="main-video" src="${gameData.media[0].url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+            mainMediaHtml = `<img id="main-image" src="${gameData.media[0].url}" alt="${gameData.media[0].altText[lang]}">`;
+        }
 
-    const thumbnailsHtml = gameData.media.map((mediaItem, index) => `
-        <div class="thumbnail ${index === 0 ? 'active' : ''}" 
-             data-type="${mediaItem.type}" 
-             data-url="${mediaItem.url}">
-            <img src="${mediaItem.thumbnail}" 
-                 alt="${mediaItem.altText}">
+        const thumbnailsHtml = gameData.media.map((mediaItem, index) => `
+            <div class="thumbnail ${index === 0 ? 'active' : ''}" 
+                 data-type="${mediaItem.type}" 
+                 data-url="${mediaItem.url}">
+                <img src="${mediaItem.thumbnail}" 
+                     alt="${mediaItem.altText[lang]}">
+            </div>
+        `).join('');
+
+        const gameHtml = `
+        <div class="game-details card full-width-layout">
+        <img src="${gameData.logoSrc}" alt="${gameData.title[lang]} Logo" class="game-logo">
+        
+        <div class="game-showcase">
+        <div class="main-display">
+        ${mainMediaHtml}
         </div>
-    `).join('');
-
-    const gameHtml = `
-    <div class="game-details card full-width-layout">
-    <img src="${gameData.logoSrc}" alt="${gameData.title} Logo" class="game-logo">
-    
-    <div class="game-showcase">
-    <div class="main-display">
-    ${mainMediaHtml}
-    </div>
-    <div class="thumbnail-list">
-    ${thumbnailsHtml}
-    
-    </div>
-    </div>
-    
-            <p class="game-description">${gameData.description}</p> 
-            <a href="${gameData.steamUrl}" class="button" target="_blank" rel="noopener noreferrer">View on Steam</a>
+        <div class="thumbnail-list">
+        ${thumbnailsHtml}
+        
         </div>
-    `;
+        </div>
+        
+                <p class="game-description">${gameData.description[lang]}</p> 
+                <a href="${gameData.steamUrl}" class="button" target="_blank" rel="noopener noreferrer">${lang === 'tr' ? 'Steam\'de Görüntüle' : 'View on Steam'}</a>
+            </div>
+        `;
 
-    contentArea.innerHTML = gameHtml;
+        contentArea.innerHTML = gameHtml;
 
-    // Event Delegation for Thumbnails
-    const thumbnailList = contentArea.querySelector('.thumbnail-list');
-    if (thumbnailList) {
-        thumbnailList.addEventListener('click', (event) => {
-            const clickedElement = event.target.closest('.thumbnail');
-            if (clickedElement) {
-                const type = clickedElement.dataset.type;
-                const url = clickedElement.dataset.url;
-                updateMainDisplay(type, url, clickedElement);
-            }
-        });
+        // Event Delegation for Thumbnails
+        const thumbnailList = contentArea.querySelector('.thumbnail-list');
+        if (thumbnailList) {
+            thumbnailList.addEventListener('click', (event) => {
+                const clickedElement = event.target.closest('.thumbnail');
+                if (clickedElement) {
+                    const type = clickedElement.dataset.type;
+                    const url = clickedElement.dataset.url;
+                    updateMainDisplay(type, url, clickedElement, lang);
+                }
+            });
+        }
     }
-}
-
 
     // Function to update the main display area
-    function updateMainDisplay(type, url, clickedElement) { 
+    function updateMainDisplay(type, url, clickedElement, lang = currentLang) { 
         const mainDisplay = document.querySelector('.main-display');
         
         // Remove active class from all thumbnails
@@ -252,12 +283,90 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Call all generation functions when the DOM is ready
-    generateItchGames();
-    generateUnityAssetCards();
-    generateSteamGames(); // Call the new function here
+    // i18n for static text
+    const translations = {
+        en: {
+            nav_about: "About Me",
+            nav_steam: "Steam Games",
+            nav_assets: "Unity Assets",
+            nav_itch: "Itch.io Games",
+            about_title: "About Me",
+            about_intro: "Hi! I'm <strong>Nima Peykarimeh</strong>, a creative and systems-focused game developer with a deep passion for building interactive experiences in Unity.",
+            about_desc: "From polished tools on the Unity Asset Store to engaging games on Steam and itch.io, I enjoy designing modular systems, solving technical challenges, and crafting gameplay that feels great.",
+            steam_title: "Available on Steam",
+            assets_title: "Asset Store Creations",
+            itch_title: "Itch.io Games"
+        },
+        tr: {
+            nav_about: "Hakkımda",
+            nav_steam: "Steam Oyunlarım",
+            nav_assets: "Unity Araçlarım",
+            nav_itch: "Itch.io Oyunlarım",
+            about_title: "Hakkımda",
+            about_intro: "Merhaba! Ben <strong>Nima Peykarimeh</strong>. Unity ile etkileşimli deneyimler üretmeyi seven yaratıcı ve sistem odaklı bir oyun geliştiricisiyim.",
+            about_desc: "Unity Asset Store'daki araçlardan Steam ve Itch.io'daki oyunlara kadar uzanan projelerde; modüler sistemler tasarlamayı, teknik problemleri çözmeyi ve akıcı oynanışlar yaratmayı seviyorum.",
+            steam_title: "Steam'de Yayında",
+            assets_title: "Asset Store Ürünlerim",
+            itch_title: "Itch.io Oyunlarım"
+}
+
+    };
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+        // Optionally, update button styles to show active language
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-tr').classList.toggle('active', lang === 'tr');
+
+        // Regenerate dynamic content
+        generateItchGames(lang);
+        generateUnityAssetCards(lang);
+        generateSteamGames(lang);
+    }
+
+    // Language button event listeners
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-tr').addEventListener('click', () => setLanguage('tr'));
+
+    // Set default language and generate content
+    setLanguage('en');
+
+    // Particles.js initialization
     particlesJS.load('particles-unity-assets', 'particles.json');
     particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
+        console.log('particles.js loaded - callback');
+    });
+
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        document.body.classList.toggle('menu-open', navLinks.classList.contains('open'));
+    });
+
+    // Optional: Close menu when a link is clicked (for better UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+        });
+    });
+    // Optional: Close menu when clicking outside the panel
+    document.addEventListener('click', (e) => {
+        if (
+            navLinks.classList.contains('open') &&
+            !navLinks.contains(e.target) &&
+            e.target !== menuToggle
+        ) {
+            navLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+        }
+    });
 });

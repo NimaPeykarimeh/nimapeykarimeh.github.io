@@ -36,6 +36,18 @@ body {
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
+/* ...Language... */
+.lang-switch {
+    display: flex;
+    gap: 8px;
+    
+}
+.lang-switch .button.active {
+    background-color: var(--color-accent-hover);
+    border: 1px solid var(--color-border);
+}
+/* ...Language... */
+
 /* Particle Settings*/
 .section-padding.position-relative {
   position: relative;
@@ -564,3 +576,103 @@ a:hover {
 
     /* Removed .media-wrapper specific rules as they are no longer needed with the new structure */
 }
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1101;
+    margin-left: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-text-white);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Slide-in panel nav styles */
+@media (max-width: 900px) {
+    .navbar {
+        position: relative;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        height: 100vh;
+        width: 260px;
+        background: var(--color-bg-darker);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 30px 30px 30px;
+        gap: 30px;
+        box-shadow: -4px 0 24px var(--color-shadow-dark);
+        border-radius: 0 0 0 16px;
+        display: flex;
+        z-index: 1100;
+        transition: right 0.35s cubic-bezier(.77,0,.18,1);
+    }
+    .nav-links.open {
+        right: 0;
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .nav-links a {
+        font-size: 1.2em;
+        width: 100%;
+        display: block;
+        padding: 12px 0;
+    }
+    .lang-switch {
+        margin-top: 30px;
+        margin-left: 0;
+
+        justify-content: flex-start;
+    }
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Sticky language switcher for bottom right */
+.lang-switch-sticky {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 2000;
+    background: rgba(22,22,22,0.95);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px var(--color-shadow-dark);
+    padding: 10px 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid var(--color-border);
+}
+.lang-switch-sticky .button {
+    min-width: 44px;
+    padding: 8px 14px;
+    font-size: 1em;
+}
+.lang-switch-sticky .button.active {
+    background-color: var(--color-accent-hover);
+    border: 2px solid var(--color-accent);
+}
+
