@@ -66,9 +66,13 @@ h1, h2, h3, h4, h5, h6 {
 h2.section-title {
     font-size: 2.5em;
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 0 auto 20px auto;
     position: relative;
-    padding-bottom: 10px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    border-radius: 1rem;
 }
 
 h2.section-title::after {
@@ -111,6 +115,7 @@ a:hover {
 
 .bg-dark-alt {
     background-color: var(--color-bg-alt-dark); /* Slightly lighter dark for alternating sections */
+    
 }
 
 /* Header & Navigation */
@@ -227,6 +232,7 @@ a:hover {
 #about .section-title {
     
     text-align: center;
+    
 
 }
 
