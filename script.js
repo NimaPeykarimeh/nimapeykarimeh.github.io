@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: "Penny for Your Potion",
             logoSrc: "media/Logo.png", // Assuming this is a local path to your logo
-            description: "A cozy yet mysterious potion-making simulation game. Serve whimsical customers, uncover secrets, and build your own magical potion shop.",
+            description: "Welcome to Penny for Your Potion! Customize your shop, manage your garden and brew potions for your customers to discover new ingredients, recipes and secrets in this medieval management game. Build the store of your dreams, grow your reputation and become the greatest alchemist in history!",
             steamUrl: "https://store.steampowered.com/app/3560010/Penny_for_Your_Potion/",
             media: [
                 {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     </div>
     
-            <p class="game-description">${gameData.description}</p>
+            <p class="game-description">${gameData.description}</p> 
             <a href="${gameData.steamUrl}" class="button" target="_blank" rel="noopener noreferrer">View on Steam</a>
         </div>
     `;
