@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: "A fast and easy-to-use tool for painting prefabs in your Unity scenes.",
                 tr: "Unity sahnelerinizde prefabları hızlıca boyamak için kolay bir araç."
             },
-            assetUrl: "https://assetstore.unity.com/packages/slug/315001"
+            assetUrl: "https://assetstore.unity.com/packages/slug/315001",
+            buttonText: { en: "View on Asset Store", tr: "Asset Store'da Görüntüle" },
+            isActive: true
         },
         {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/088ba073-04bc-4f6c-b971-72a0a2a5a324.webp",
@@ -80,7 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: "A modular and customizable flashlight system for Unity with battery management and effects.",
                 tr: "Pil yönetimi ve efektlerle modüler, özelleştirilebilir bir Unity fener sistemi."
             },
-            assetUrl: "https://assetstore.unity.com/packages/slug/327109"
+            assetUrl: "https://assetstore.unity.com/packages/slug/327109",
+            buttonText: { en: "View on Asset Store", tr: "Asset Store'da Görüntüle" },
+            isActive: true
         },
         {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/a331e081-fc11-48a0-8b0b-127c259a3121.webp",
@@ -89,7 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: "A comprehensive 2D platformer framework with smooth movement, enemies, pickups, and more.",
                 tr: "Akıcı hareket, düşmanlar, toplama nesneleri ve daha fazlasını içeren kapsamlı bir 2D platformer altyapısı."
             },
-            assetUrl: "https://assetstore.unity.com/packages/slug/328245"
+            assetUrl: "https://assetstore.unity.com/packages/slug/328245",
+            buttonText: { en: "Coming Soon", tr: "Yakında Geliyor" },
+            isActive: false
         }
     ];
 
@@ -173,12 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
         gridContainer.innerHTML = ''; // Clear any existing content
 
         myUnityAssets.forEach(asset => {
+            const buttonAttributes = asset.isActive
+                ? `href="${asset.assetUrl}" target="_blank" rel="noopener noreferrer"`
+                : '';
+            const buttonClass = asset.isActive ? 'button' : 'button disabled';
+
             const cardHtml = `
                 <div class="grid-item card">
                     <img src="${asset.imageSrc}" alt="${asset.title[lang]}" class="asset-image">
                     <h3 class="asset-title">${asset.title[lang]}</h3>
                     <p class="asset-description">${asset.description[lang]}</p>
-                    <a href="${asset.assetUrl}" class="button" target="_blank" rel="noopener noreferrer">${lang === 'tr' ? 'Asset Store\'da Görüntüle' : 'View on Asset Store'}</a>
+                    <a class="${buttonClass}" ${buttonAttributes}>${asset.buttonText[lang]}</a>
                 </div>
             `;
             gridContainer.innerHTML += cardHtml;
