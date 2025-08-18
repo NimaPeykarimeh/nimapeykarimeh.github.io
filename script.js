@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('pointerdown', () => {
         navLinks.classList.toggle('open');
         document.body.classList.toggle('menu-open', navLinks.classList.contains('open'));
     });
@@ -369,15 +369,15 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('menu-open');
         });
     });
-    // Optional: Close menu when clicking outside the panel
-    document.addEventListener('click', (e) => {
-        if (
-            navLinks.classList.contains('open') &&
-            !navLinks.contains(e.target) &&
-            e.target !== menuToggle
-        ) {
-            navLinks.classList.remove('open');
-            document.body.classList.remove('menu-open');
-        }
-    });
+    // // Optional: Close menu when clicking outside the panel
+    // document.addEventListener('click', (e) => {
+    //     if (
+    //         navLinks.classList.contains('open') &&
+    //         !navLinks.contains(e.target) &&
+    //         e.target !== menuToggle
+    //     ) {
+    //         navLinks.classList.remove('open');
+    //         document.body.classList.remove('menu-open');
+    //     }
+    // });
 });
