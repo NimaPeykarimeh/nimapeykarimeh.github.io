@@ -304,9 +304,33 @@ document.addEventListener('DOMContentLoaded', () => {
             about_title: "About Me",
             about_intro: "Hi! I'm <strong>Nima Peykarimeh</strong>, a creative and systems-focused game developer with a deep passion for building interactive experiences in Unity.",
             about_desc: "From polished tools on the Unity Asset Store to engaging games on Steam and itch.io, I enjoy designing modular systems, solving technical challenges, and crafting gameplay that feels great.",
+            about_passion: "My journey in game development combines technical expertise with creative vision, always striving to create experiences that are both innovative and enjoyable for players.",
             steam_title: "Available on Steam",
             assets_title: "Asset Store Creations",
-            itch_title: "Itch.io Games"
+            itch_title: "Itch.io Games",
+            
+            // Stats
+            stat_games: "10+",
+            stat_games_label: "Games Published",
+            stat_assets: "3+",
+            stat_assets_label: "Unity Assets",
+            stat_experience: "5+",
+            stat_experience_label: "Years Experience",
+            
+            // Skills
+            skills_title: "Core Expertise",
+            skill_unity: "Unity Engine",
+            skill_csharp: "C# Programming",
+            skill_architecture: "System Architecture",
+            skill_gamedesign: "Game Design",
+            skill_tools: "Tool Development",
+            skill_platforms: "Multi-Platform",
+            
+            // Achievements
+            achievements_title: "Recent Achievements",
+            achievement_steam: "Published \"Penny for Your Potion\" on Steam",
+            achievement_assets: "Created popular Unity tools used by thousands",
+            achievement_community: "Active contributor to game development community"
         },
         tr: {
             nav_about: "Hakkımda",
@@ -316,11 +340,34 @@ document.addEventListener('DOMContentLoaded', () => {
             about_title: "Hakkımda",
             about_intro: "Merhaba! Ben <strong>Nima Peykarimeh</strong>. Unity ile etkileşimli deneyimler üretmeyi seven yaratıcı ve sistem odaklı bir oyun geliştiricisiyim.",
             about_desc: "Unity Asset Store'daki araçlardan Steam ve Itch.io'daki oyunlara kadar uzanan projelerde; modüler sistemler tasarlamayı, teknik problemleri çözmeyi ve akıcı oynanışlar yaratmayı seviyorum.",
+            about_passion: "Oyun geliştirme yolculuğumda teknik uzmanlığı yaratıcı vizyonla birleştirerek, hem yenilikçi hem de oyuncular için keyifli deneyimler yaratmaya çalışıyorum.",
             steam_title: "Steam'de Yayında",
             assets_title: "Asset Store Ürünlerim",
-            itch_title: "Itch.io Oyunlarım"
-}
-
+            itch_title: "Itch.io Oyunlarım",
+            
+            // Stats
+            stat_games: "10+",
+            stat_games_label: "Yayınlanan Oyun",
+            stat_assets: "3+",
+            stat_assets_label: "Unity Aracı",
+            stat_experience: "5+",
+            stat_experience_label: "Yıl Deneyim",
+            
+            // Skills
+            skills_title: "Temel Uzmanlık Alanları",
+            skill_unity: "Unity Motoru",
+            skill_csharp: "C# Programlama",
+            skill_architecture: "Sistem Mimarisi",
+            skill_gamedesign: "Oyun Tasarımı",
+            skill_tools: "Araç Geliştirme",
+            skill_platforms: "Çoklu Platform",
+            
+            // Achievements
+            achievements_title: "Son Başarılar",
+            achievement_steam: "\"Penny for Your Potion\" oyununu Steam'de yayınladım",
+            achievement_assets: "Binlerce kişi tarafından kullanılan Unity araçları yarattım",
+            achievement_community: "Oyun geliştirme topluluğuna aktif katkı sağlıyorum"
+        }
     };
 
     function setLanguage(lang) {

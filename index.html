@@ -6,6 +6,7 @@
     <title>Nima Peykarimeh - Game Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -35,16 +36,92 @@
   <!-- Actual content above -->
   <div class="container">
     <h2 class="section-title" data-i18n="about_title">About Me</h2>
+    
+    <!-- Main About Content -->
     <div class="about-content">
-      <img src="media/photo.jpeg" alt="Nima Peykarimeh" class="profile-pic rounded-full shadow-lg">
+      <div class="profile-section">
+        <img src="media/photo.jpeg" alt="Nima Peykarimeh" class="profile-pic">
+        
+        <!-- Minimal Skills Section under profile -->
+        <div class="skills-section-minimal">
+          <div class="skills-grid-minimal">
+            <div class="skill-item-minimal">
+              <i class="fas fa-gamepad skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_unity">Unity</span>
+            </div>
+            <div class="skill-item-minimal">
+              <i class="fas fa-code skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_csharp">C#</span>
+            </div>
+            <div class="skill-item-minimal">
+              <i class="fas fa-sitemap skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_architecture">Architecture</span>
+            </div>
+            <div class="skill-item-minimal">
+              <i class="fas fa-paint-brush skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_gamedesign">Design</span>
+            </div>
+            <div class="skill-item-minimal">
+              <i class="fas fa-tools skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_tools">Tools</span>
+            </div>
+            <div class="skill-item-minimal">
+              <i class="fas fa-mobile-alt skill-icon-minimal"></i>
+              <span class="skill-name-minimal" data-i18n="skill_platforms">Multi-Platform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="about-text">
-        <p data-i18n="about_intro">
-  Hi! I'm <strong>Nima Peykarimeh</strong>, a creative and systems-focused game developer with a deep passion for building interactive experiences in Unity.
-</p>
-<p data-i18n="about_desc">
-  From polished tools on the Unity Asset Store to engaging games on Steam and itch.io, I enjoy designing modular systems, solving technical challenges, and crafting gameplay that feels great.
-</p>
-
+        <div class="intro-text">
+          <p data-i18n="about_intro">
+            Hi! I'm <strong>Nima Peykarimeh</strong>, a creative and systems-focused game developer with a deep passion for building interactive experiences in Unity.
+          </p>
+          <p data-i18n="about_desc">
+            From polished tools on the Unity Asset Store to engaging games on Steam and itch.io, I enjoy designing modular systems, solving technical challenges, and crafting gameplay that feels great.
+          </p>
+          <p data-i18n="about_passion">
+            My journey in game development combines technical expertise with creative vision, always striving to create experiences that are both innovative and enjoyable for players.
+          </p>
+        </div>
+        
+        <!-- Stats Section horizontal under about text -->
+        <div class="stats-section-horizontal">
+          <div class="stats-grid-horizontal">
+            <div class="stat-item-horizontal">
+              <span class="stat-number-horizontal" data-i18n="stat_games">10+</span>
+              <span class="stat-label-horizontal" data-i18n="stat_games_label">Games Published</span>
+            </div>
+            <div class="stat-item-horizontal">
+              <span class="stat-number-horizontal" data-i18n="stat_assets">3+</span>
+              <span class="stat-label-horizontal" data-i18n="stat_assets_label">Unity Assets</span>
+            </div>
+            <div class="stat-item-horizontal">
+              <span class="stat-number-horizontal" data-i18n="stat_experience">5+</span>
+              <span class="stat-label-horizontal" data-i18n="stat_experience_label">Years Experience</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Achievement Highlights -->
+        <div class="achievements-section">
+          <h3 data-i18n="achievements_title">Recent Achievements</h3>
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <i class="fas fa-trophy achievement-icon"></i>
+              <span class="achievement-text" data-i18n="achievement_steam">Published "Penny for Your Potion" on Steam</span>
+            </div>
+            <div class="achievement-item">
+              <i class="fas fa-star achievement-icon"></i>
+              <span class="achievement-text" data-i18n="achievement_assets">Created popular Unity tools used by thousands</span>
+            </div>
+            <div class="achievement-item">
+              <i class="fas fa-rocket achievement-icon"></i>
+              <span class="achievement-text" data-i18n="achievement_community">Active contributor to game development community</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
