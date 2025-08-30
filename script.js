@@ -302,20 +302,19 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_assets: "Unity Assets",
             nav_itch: "Itch.io Games",
             about_title: "About Me",
-            about_intro: "Hi! I'm <strong>Nima Peykarimeh</strong>, a creative and systems-focused game developer with a deep passion for building interactive experiences in Unity.",
-            about_desc: "From polished tools on the Unity Asset Store to engaging games on Steam and itch.io, I enjoy designing modular systems, solving technical challenges, and crafting gameplay that feels great.",
-            about_passion: "My journey in game development combines technical expertise with creative vision, always striving to create experiences that are both innovative and enjoyable for players.",
+            about_intro: "I’m Nima Peykarimeh. I love taking systems apart just to see how they can be built better. Unity is my playground. Sometimes I’m making tools that help other developers work smarter, sometimes I’m experimenting with prototypes that might turn into full games.",
+            about_desc: "What fascinates me is how small mechanics can ripple into bigger experiences for players. That’s why I focus on modular, reusable systems. They let me experiment, iterate, and find fun in places I didn’t expect. My work lives where technical problem-solving meets playful creativity, and that’s exactly where I want to be.",
             steam_title: "Available on Steam",
             assets_title: "Asset Store Creations",
             itch_title: "Itch.io Games",
             
             // Stats
+            stat_experience: "5",
+            stat_experience_label: "Years experience with Unity",
+            stat_assets: "3",
+            stat_assets_label: "Tools on the Unity Asset Store",
             stat_games: "10+",
-            stat_games_label: "Games Published",
-            stat_assets: "3+",
-            stat_assets_label: "Unity Assets",
-            stat_experience: "5+",
-            stat_experience_label: "Years Experience",
+            stat_games_label: "Playable Games & Prototypes",
             
             // Skills
             skills_title: "Core Expertise",
@@ -324,34 +323,27 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_architecture: "System Architecture",
             skill_gamedesign: "Game Design",
             skill_tools: "Tool Development",
-            skill_platforms: "Multi-Platform",
-            
-            // Achievements
-            achievements_title: "Recent Achievements",
-            achievement_steam: "Published \"Penny for Your Potion\" on Steam",
-            achievement_assets: "Created popular Unity tools used by thousands",
-            achievement_community: "Active contributor to game development community"
+            skill_platforms: "Multi-Platform"
         },
         tr: {
-            nav_about: "Hakkımda",
-            nav_steam: "Steam Oyunlarım",
-            nav_assets: "Unity Araçlarım",
-            nav_itch: "Itch.io Oyunlarım",
-            about_title: "Hakkımda",
-            about_intro: "Merhaba! Ben <strong>Nima Peykarimeh</strong>. Unity ile etkileşimli deneyimler üretmeyi seven yaratıcı ve sistem odaklı bir oyun geliştiricisiyim.",
-            about_desc: "Unity Asset Store'daki araçlardan Steam ve Itch.io'daki oyunlara kadar uzanan projelerde; modüler sistemler tasarlamayı, teknik problemleri çözmeyi ve akıcı oynanışlar yaratmayı seviyorum.",
-            about_passion: "Oyun geliştirme yolculuğumda teknik uzmanlığı yaratıcı vizyonla birleştirerek, hem yenilikçi hem de oyuncular için keyifli deneyimler yaratmaya çalışıyorum.",
+                stat_experience: "5",
+                stat_experience_label: "Years experience with Unity",
+                stat_assets: "3",
+                stat_assets_label: "Tools on the Unity Asset Store",
+                stat_games: "10+",
+                stat_games_label: "Playable Games and Prototypes",
+            about_desc: "Beni en çok heyecanlandıran şey, küçük mekaniklerin oyun deneyimini nasıl büyük ölçüde değiştirebileceğini görmek. Bu yüzden modüler ve tekrar kullanılabilir sistemler tasarlamayı tercih ediyorum. Böylece deniyor, değiştiriyor ve beklemediğim yerlerde eğlenceli sonuçlar keşfedebiliyorum. İşim teknik çözüm üretmekle yaratıcı fikirleri bir araya getirmek arasında, tam olarak orada olmayı seviyorum.",
             steam_title: "Steam'de Yayında",
             assets_title: "Asset Store Ürünlerim",
             itch_title: "Itch.io Oyunlarım",
             
             // Stats
+            stat_experience: "5",
+            stat_experience_label: "Yıl Unity deneyimi",
+            stat_assets: "3",
+            stat_assets_label: "Unity Asset Store aracı",
             stat_games: "10+",
-            stat_games_label: "Yayınlanan Oyun",
-            stat_assets: "3+",
-            stat_assets_label: "Unity Aracı",
-            stat_experience: "5+",
-            stat_experience_label: "Yıl Deneyim",
+            stat_games_label: "Oynanabilir Oyun ve Prototip",
             
             // Skills
             skills_title: "Temel Uzmanlık Alanları",
@@ -360,13 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_architecture: "Sistem Mimarisi",
             skill_gamedesign: "Oyun Tasarımı",
             skill_tools: "Araç Geliştirme",
-            skill_platforms: "Çoklu Platform",
-            
-            // Achievements
-            achievements_title: "Son Başarılar",
-            achievement_steam: "\"Penny for Your Potion\" oyununu Steam'de yayınladım",
-            achievement_assets: "Binlerce kişi tarafından kullanılan Unity araçları yarattım",
-            achievement_community: "Oyun geliştirme topluluğuna aktif katkı sağlıyorum"
+            skill_platforms: "Çoklu Platform"
         }
     };
 
