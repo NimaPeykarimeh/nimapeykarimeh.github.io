@@ -333,6 +333,14 @@ a:hover {
     color: var(--color-text-white);
 }
 
+.skill-logo-minimal {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 6px;
+    margin-bottom: 0;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
 .skill-name-minimal {
     font-size: 0.8em;
     font-weight: 600;
@@ -399,48 +407,53 @@ a:hover {
     margin-bottom: 0;
 }
 
-/* Horizontal Stats Section */
-.stats-section-horizontal {
-    margin-top: 30px;
+/* Integrated Stats Section within intro-text */
+.stats-section-integrated {
+    
+    
+    
 }
 
-.stats-grid-horizontal {
+.stats-grid-integrated {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
+    margin-top: 20px;
 }
 
-.stat-item-horizontal {
+.stat-item-integrated {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 15px;
-    background: rgba(114, 114, 114, 0.1);
-    border-radius: 12px;
-    border: 1px solid var(--color-border);
-    backdrop-filter: blur(5px);
+    padding: 15px 10px;
+    background: transparent;
+    border-radius: 8px;
     transition: all 0.3s ease;
     text-align: center;
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(5px);
 }
 
-.stat-item-horizontal:hover {
-    background: rgba(114, 114, 114, 0.2);
+
+.stat-item-integrated:hover {
+    background: rgba(255, 255, 255, 0.03);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px var(--color-shadow-dark);
 }
 
-.stat-number-horizontal {
-    font-size: 2em;
+.stat-number-integrated {
+    font-size: 2.2em;
     font-weight: 700;
     color: var(--color-accent);
     line-height: 1;
+    margin-bottom: 8px;
 }
 
-.stat-label-horizontal {
-    font-size: 0.9em;
+.stat-label-integrated {
+    font-size: 0.85em;
     color: var(--color-text-muted);
     text-align: center;
-    margin-top: 5px;
+    line-height: 1.3;
+    font-weight: 400;
 }
 
 
@@ -718,21 +731,21 @@ a:hover {
         font-size: 0.75em;
     }
 
-    /* Horizontal stats responsive */
-    .stats-grid-horizontal {
+    /* Integrated stats responsive */
+    .stats-grid-integrated {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
-    .stat-item-horizontal {
+    .stat-item-integrated {
         padding: 15px 10px;
     }
 
-    .stat-number-horizontal {
-        font-size: 1.6em;
+    .stat-number-integrated {
+        font-size: 1.8em;
     }
 
-    .stat-label-horizontal {
+    .stat-label-integrated {
         font-size: 0.8em;
     }
 
@@ -810,21 +823,21 @@ a:hover {
         font-size: 0.7em;
     }
 
-    /* Horizontal stats mobile */
-    .stats-grid-horizontal {
+    /* Integrated stats mobile */
+    .stats-grid-integrated {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 
-    .stat-item-horizontal {
+    .stat-item-integrated {
         padding: 12px 8px;
     }
 
-    .stat-number-horizontal {
-        font-size: 1.4em;
+    .stat-number-integrated {
+        font-size: 1.6em;
     }
 
-    .stat-label-horizontal {
+    .stat-label-integrated {
         font-size: 0.75em;
     }
 
