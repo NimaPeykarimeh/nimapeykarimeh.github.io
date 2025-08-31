@@ -249,7 +249,7 @@ a:hover {
     display: flex;
     flex-direction: row; /* Desktop: side by side */
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
     text-align: left;
     margin-top: 40px;
 }
@@ -261,8 +261,17 @@ a:hover {
     align-items: center;
     gap: 30px;
     min-width: 280px;
-    max-width: 320px;
+    max-width: 350px;
     flex-shrink: 0;
+    
+    /* Card styling to match other sections */
+    /* background: rgba(114, 114, 114, 0.1);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(5px);
+    padding: 0px 10px;
+    height: fit-content;
+    align-self: stretch; */
 }
 
 .profile-pic {
@@ -291,7 +300,6 @@ a:hover {
 /* Minimal Skills Section under profile */
 .skills-section-minimal {
     width: 100%;
-    max-width: 320px;
     margin-top: 20px;
     box-sizing: border-box;
 }
@@ -299,7 +307,7 @@ a:hover {
 .skills-grid-minimal {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     justify-content: center;
     max-width: 100%;
     align-items: flex-start;
@@ -309,9 +317,9 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 6px 12px;
+    padding: 6px 8px;
     background-color: var(--color-accent);
-    border-radius: 20px;
+    border-radius: 16px;
     border: none;
     transition: all 0.3s ease;
     text-align: left;
@@ -327,7 +335,7 @@ a:hover {
 }
 
 .skill-icon-minimal {
-    font-size: 0.9em;
+    font-size: 1em;
     margin-right: 6px;
     margin-bottom: 0;
     color: var(--color-text-white);
@@ -342,7 +350,7 @@ a:hover {
 }
 
 .skill-name-minimal {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 600;
     color: var(--color-text-white);
     text-align: left;

@@ -326,17 +326,16 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_platforms: "Multi-Platform"
         },
         tr: {
-                stat_experience: "5",
-                stat_experience_label: "Years experience with Unity",
-                stat_assets: "3",
-                stat_assets_label: "Tools on the Unity Asset Store",
-                stat_games: "10+",
-                stat_games_label: "Playable Games and Prototypes",
+            nav_about: "Hakkımda",
+            nav_steam: "Steam Oyunları",
+            nav_assets: "Unity Varlıkları",
+            nav_itch: "Itch.io Oyunları",
+            about_title: "Hakkımda",
+            about_intro: "Ben Nima Peykarimeh. Sistemleri söküp, daha iyi nasıl inşa edilebileceklerini görmekten hoşlanıyorum. Unity benim oyun alanım. Bazen diğer geliştiricilerin daha akıllıca çalışmalarına yardımcı olan araçlar yapıyorum, bazen de tam bir oyuna dönüşebilecek prototiplerle denemeler yapıyorum.",
             about_desc: "Beni en çok heyecanlandıran şey, küçük mekaniklerin oyun deneyimini nasıl büyük ölçüde değiştirebileceğini görmek. Bu yüzden modüler ve tekrar kullanılabilir sistemler tasarlamayı tercih ediyorum. Böylece deniyor, değiştiriyor ve beklemediğim yerlerde eğlenceli sonuçlar keşfedebiliyorum. İşim teknik çözüm üretmekle yaratıcı fikirleri bir araya getirmek arasında, tam olarak orada olmayı seviyorum.",
             steam_title: "Steam'de Yayında",
             assets_title: "Asset Store Ürünlerim",
             itch_title: "Itch.io Oyunlarım",
-            
             // Stats
             stat_experience: "5",
             stat_experience_label: "Yıl Unity deneyimi",
@@ -344,7 +343,6 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_assets_label: "Unity Asset Store aracı",
             stat_games: "10+",
             stat_games_label: "Oynanabilir Oyun ve Prototip",
-            
             // Skills
             skills_title: "Temel Uzmanlık Alanları",
             skill_unity: "Unity Motoru",
