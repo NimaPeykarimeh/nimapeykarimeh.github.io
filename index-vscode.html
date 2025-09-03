@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nima Peykarimeh - Game Developer</title>
+    <link rel="stylesheet" href="style-vscode.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- VS Code Layout -->
+    <div class="vscode-layout">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-bar-left">
+                <div class="window-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="title">Nima Peykarimeh - Portfolio</span>
+            </div>
+            <div class="title-bar-center">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search files, commands, etc." readonly>
+                </div>
+            </div>
+            <div class="title-bar-right">
+                <div class="lang-switch">
+                    <button id="lang-en" class="lang-btn active" type="button">EN</button>
+                    <button id="lang-tr" class="lang-btn" type="button">TR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Activity Bar -->
+            <div class="activity-bar">
+                <div class="activity-item active" data-panel="explorer">
+                    <i class="fas fa-copy"></i>
+                    <span class="tooltip">Explorer</span>
+                </div>
+                <div class="activity-item" data-panel="search">
+                    <i class="fas fa-search"></i>
+                    <span class="tooltip">Search</span>
+                </div>
+                <div class="activity-item" data-panel="git">
+                    <i class="fas fa-code-branch"></i>
+                    <span class="tooltip">Source Control</span>
+                </div>
+                <div class="activity-item" data-panel="extensions">
+                    <i class="fas fa-th-large"></i>
+                    <span class="tooltip">Extensions</span>
+                </div>
+            </div>
+
+            <!-- Side Panel -->
+            <div class="side-panel">
+                <!-- Explorer Panel -->
+                <div class="panel explorer-panel active">
+                    <div class="panel-header">
+                        <span>EXPLORER</span>
+                        <div class="panel-actions">
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-sync"></i>
+                        </div>
+                    </div>
+                    <div class="file-tree">
+                        <div class="folder expanded">
+                            <div class="folder-header">
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-folder-open"></i>
+                                <span>portfolio</span>
+                            </div>
+                            <div class="folder-content">
+                                <div class="file active" data-file="about">
+                                    <i class="fab fa-markdown"></i>
+                                    <span>about.md</span>
+                                </div>
+                                <div class="file" data-file="steam">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>steam-games.json</span>
+                                </div>
+                                <div class="file" data-file="assets">
+                                    <i class="fab fa-unity"></i>
+                                    <span>unity-assets.ts</span>
+                                </div>
+                                <div class="file" data-file="itch">
+                                    <i class="fas fa-code"></i>
+                                    <span>itch-games.js</span>
+                                </div>
+                                <div class="file" data-file="contact">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>contact.yml</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Panel -->
+                <div class="panel search-panel">
+                    <div class="panel-header">
+                        <span>SEARCH</span>
+                    </div>
+                    <div class="search-content">
+                        <div class="search-input-group">
+                            <input type="text" placeholder="Search" class="search-input">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="search-results">
+                            <div class="search-result">
+                                <div class="file-path">about.md</div>
+                                <div class="match">Unity Engine Developer</div>
+                            </div>
+                            <div class="search-result">
+                                <div class="file-path">steam-games.json</div>
+                                <div class="match">Penny for Your Potion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Git Panel -->
+                <div class="panel git-panel">
+                    <div class="panel-header">
+                        <span>SOURCE CONTROL</span>
+                    </div>
+                    <div class="git-content">
+                        <div class="git-status">
+                            <div class="branch">
+                                <i class="fas fa-code-branch"></i>
+                                <span>main</span>
+                            </div>
+                            <div class="changes">
+                                <div class="change-item">
+                                    <span class="change-type modified">M</span>
+                                    <span>portfolio.md</span>
+                                </div>
+                                <div class="change-item">
+                                    <span class="change-type added">A</span>
+                                    <span>new-project.json</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extensions Panel -->
+                <div class="panel extensions-panel">
+                    <div class="panel-header">
+                        <span>EXTENSIONS</span>
+                    </div>
+                    <div class="extensions-content">
+                        <div class="extension-item">
+                            <div class="extension-icon">
+                                <i class="fab fa-unity"></i>
+                            </div>
+                            <div class="extension-info">
+                                <div class="extension-name">Unity Tools</div>
+                                <div class="extension-desc">Unity development helper</div>
+                            </div>
+                        </div>
+                        <div class="extension-item">
+                            <div class="extension-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="extension-info">
+                                <div class="extension-name">Theme Studio</div>
+                                <div class="extension-desc">VS Code theme customizer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor Area -->
+            <div class="editor-area">
+                <!-- Tab Bar -->
+                <div class="tab-bar">
+                    <div class="tab active" data-file="about">
+                        <i class="fab fa-markdown"></i>
+                        <span data-i18n="nav_about">about.md</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
+                    <div class="tab" data-file="steam">
+                        <i class="fas fa-gamepad"></i>
+                        <span data-i18n="nav_steam">steam-games.json</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
+                    <div class="tab" data-file="assets">
+                        <i class="fab fa-unity"></i>
+                        <span data-i18n="nav_assets">unity-assets.ts</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
+                    <div class="tab" data-file="itch">
+                        <i class="fas fa-code"></i>
+                        <span data-i18n="nav_itch">itch-games.js</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
+                </div>
+
+                <!-- Editor Content -->
+                <div class="editor-content">
+                    <!-- About File -->
+                    <div class="editor-file active" data-file="about">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span>20</span>
+                            <span>21</span>
+                            <span>22</span>
+                            <span>23</span>
+                            <span>24</span>
+                            <span>25</span>
+                            <span>26</span>
+                            <span>27</span>
+                            <span>28</span>
+                            <span>29</span>
+                            <span>30</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="comment"># About Me</span>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="code-line">
+                                <span class="property">name</span><span class="punctuation">:</span> <span class="string">"Nima Peykarimeh"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="property">role</span><span class="punctuation">:</span> <span class="string">"Unity Game Developer"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="property">experience</span><span class="punctuation">:</span> <span class="number">5</span> <span class="comment"># years</span>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="code-line">
+                                <span class="comment">## Profile</span>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="profile-section-code">
+                                <div class="profile-image">
+                                    <img src="media/photo.jpeg" alt="Nima Peykarimeh" class="profile-pic">
+                                </div>
+                                <div class="profile-info">
+                                    <div class="code-line">
+                                        <span class="property">description</span><span class="punctuation">:</span> <span class="string multiline" data-i18n="about_intro">
+                                            "I'm Nima Peykarimeh. I love taking systems apart just to see how they can be built better. Unity is my playground. Sometimes I'm making tools that help other developers work smarter, sometimes I'm experimenting with prototypes that might turn into full games."
+                                        </span>
+                                    </div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line">
+                                        <span class="property">passion</span><span class="punctuation">:</span> <span class="string multiline" data-i18n="about_desc">
+                                            "What fascinates me is how small mechanics can ripple into bigger experiences for players. That's why I focus on modular, reusable systems."
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="code-line">
+                                <span class="comment">## Skills</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="property">primary_skills</span><span class="punctuation">:</span>
+                            </div>
+                            <div class="skills-grid-code">
+                                <div class="skill-item-code">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity" class="skill-logo">
+                                    <span class="skill-name" data-i18n="skill_unity">Unity Engine</span>
+                                </div>
+                                <div class="skill-item-code">
+                                    <i class="fas fa-code skill-icon"></i>
+                                    <span class="skill-name" data-i18n="skill_csharp">C# Programming</span>
+                                </div>
+                                <div class="skill-item-code">
+                                    <i class="fas fa-sitemap skill-icon"></i>
+                                    <span class="skill-name" data-i18n="skill_architecture">System Architecture</span>
+                                </div>
+                                <div class="skill-item-code">
+                                    <i class="fas fa-paint-brush skill-icon"></i>
+                                    <span class="skill-name" data-i18n="skill_gamedesign">Game Design</span>
+                                </div>
+                                <div class="skill-item-code">
+                                    <i class="fas fa-tools skill-icon"></i>
+                                    <span class="skill-name" data-i18n="skill_tools">Tool Development</span>
+                                </div>
+                                <div class="skill-item-code">
+                                    <i class="fas fa-mobile-alt skill-icon"></i>
+                                    <span class="skill-name" data-i18n="skill_platforms">Multi-Platform</span>
+                                </div>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="code-line">
+                                <span class="comment">## Statistics</span>
+                            </div>
+                            <div class="stats-grid-code">
+                                <div class="stat-item-code">
+                                    <span class="stat-number" data-i18n="stat_experience">5</span>
+                                    <span class="stat-label" data-i18n="stat_experience_label">Years experience with Unity</span>
+                                </div>
+                                <div class="stat-item-code">
+                                    <span class="stat-number" data-i18n="stat_assets">3</span>
+                                    <span class="stat-label" data-i18n="stat_assets_label">Tools on the Unity Asset Store</span>
+                                </div>
+                                <div class="stat-item-code">
+                                    <span class="stat-number" data-i18n="stat_games">10+</span>
+                                    <span class="stat-label" data-i18n="stat_games_label">Playable Games and Prototypes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Steam Games File -->
+                    <div class="editor-file" data-file="steam">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span>20</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="punctuation">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">"title"</span><span class="punctuation">:</span> <span class="string" data-i18n="steam_title">"Available on Steam"</span><span class="punctuation">,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">"games"</span><span class="punctuation">:</span> <span class="punctuation">[</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="indent"></span><span class="punctuation">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="property">"name"</span><span class="punctuation">:</span> <span class="string">"Penny for Your Potion"</span><span class="punctuation">,</span>
+                            </div>
+                            <div class="steam-game-showcase" id="steam-game-content-area">
+                                <!-- Steam game content will be generated here -->
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="indent"></span><span class="punctuation">}</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="punctuation">]</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="punctuation">}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unity Assets File -->
+                    <div class="editor-file" data-file="assets">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span>13</span>
+                            <span>14</span>
+                            <span>15</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="comment">// Unity Asset Store Creations</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="keyword">interface</span> <span class="class-name">UnityAsset</span> <span class="punctuation">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">title</span><span class="punctuation">:</span> <span class="type">string</span><span class="punctuation">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">description</span><span class="punctuation">:</span> <span class="type">string</span><span class="punctuation">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">isActive</span><span class="punctuation">:</span> <span class="type">boolean</span><span class="punctuation">;</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="punctuation">}</span>
+                            </div>
+                            <div class="code-line"></div>
+                            <div class="code-line">
+                                <span class="keyword">const</span> <span class="variable">assets</span><span class="punctuation">:</span> <span class="class-name">UnityAsset</span><span class="punctuation">[]</span> <span class="operator">=</span> <span class="punctuation">[</span>
+                            </div>
+                            <div class="unity-assets-grid" id="unity-assets-container">
+                                <!-- Unity assets will be generated here -->
+                            </div>
+                            <div class="code-line">
+                                <span class="punctuation">];</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itch.io Games File -->
+                    <div class="editor-file" data-file="itch">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span>6</span>
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="comment">/* Itch.io Games Collection */</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="keyword">const</span> <span class="variable">itchGames</span> <span class="operator">=</span> <span class="punctuation">{</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">title</span><span class="punctuation">:</span> <span class="string" data-i18n="itch_title">'Itch.io Games'</span><span class="punctuation">,</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="property">games</span><span class="punctuation">:</span> <span class="punctuation">[</span>
+                            </div>
+                            <div class="itch-games-grid" id="itch-games-container">
+                                <!-- Itch.io games will be generated here -->
+                            </div>
+                            <div class="code-line">
+                                <span class="indent"></span><span class="punctuation">]</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="punctuation">};</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-item">
+                    <i class="fas fa-code-branch"></i>
+                    main
+                </span>
+                <span class="status-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    0
+                </span>
+                <span class="status-item">
+                    <i class="fas fa-times-circle"></i>
+                    0
+                </span>
+            </div>
+            <div class="status-right">
+                <span class="status-item">Ln 1, Col 1</span>
+                <span class="status-item">Markdown</span>
+                <span class="status-item">UTF-8</span>
+                <span class="status-item">LF</span>
+                <span class="status-item">
+                    <a href="https://github.com/nimapeykarimeh" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </span>
+                <span class="status-item">
+                    <a href="https://www.linkedin.com/in/nima-peykarimeh/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </span>
+                <span class="status-item">
+                    <a href="https://nimapeykarimeh.itch.io/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-itch-io"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="script-vscode.js"></script>
+</body>
+</html>
