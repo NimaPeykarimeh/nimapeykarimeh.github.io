@@ -497,10 +497,15 @@ a:hover {
     object-fit: cover; /* Ensures images/videos fill the space without distortion */
 }
 .game-image{
-    aspect-ratio: 16/9;
+    aspect-ratio: 315/250;
 }
-.asset-image{
-    aspect-ratio: 16/9;
+.asset-image {
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--color-shadow-light);
+    margin-bottom: 20px;
 }
 .thumbnail-list {
     flex: 1 0 0; /* flex-grow flex-shrink flex-basis */
@@ -588,7 +593,7 @@ a:hover {
 
 .grid-item img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    /* height: 200px; Fixed height for consistency */
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;

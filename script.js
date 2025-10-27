@@ -87,11 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
             isActive: true
         },
         {
+            imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/790f7a80-fef7-4998-9fd7-8962895de0e9.jpg",
+            title: { en: "Prefab Brush Pro", tr: "Prefab Brush Pro" },
+            description: {
+                en: "Paint prefabs directly in your Unity scene. Build environments in minutes with full creative control.",
+                tr: "Prefab Brush Pro ile Unity'de prefabları sahneye kolayca boyayın. Ortamları dakikalar içinde oluşturun, tam kontrol sizde olsun."
+            },
+            assetUrl: "https://assetstore.unity.com/packages/slug/332936",
+            buttonText: { en: "View on Asset Store", tr: "Asset Store'da Görüntüle" },
+            isActive: true
+        },
+        {
             imageSrc: "https://assetstorev1-prd-cdn.unity3d.com/key-image/a331e081-fc11-48a0-8b0b-127c259a3121.webp",
             title: { en: "Ultimate 2D Platformer Toolkit", tr: "Ultimate 2D Platformer Araç Seti" },
             description: {
-                en: "A comprehensive 2D platformer framework with smooth movement, enemies, pickups, and more.",
-                tr: "Akıcı hareket, düşmanlar, toplama nesneleri ve daha fazlasını içeren kapsamlı bir 2D platformer altyapısı."
+                en: "A comprehensive 2D platformer framework with smooth movement.",
+                tr: "Akıcı hareket ve daha fazlasını içeren kapsamlı bir 2D platformer altyapısı."
             },
             assetUrl: "https://assetstore.unity.com/packages/slug/328245",
             buttonText: { en: "Coming Soon", tr: "Yakında Geliyor" },
