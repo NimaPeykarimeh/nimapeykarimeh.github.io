@@ -308,10 +308,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // i18n for static text
     const translations = {
         en: {
+            nav_reel: "Developer Reel",
             nav_about: "About Me",
             nav_steam: "Steam Games",
             nav_assets: "Unity Assets",
             nav_itch: "Itch.io Games",
+            reel_title: "Developer Reel",
             about_title: "About Me",
             about_intro: "I’m Nima Peykarimeh. I love taking systems apart just to see how they can be built better. Unity is my playground. Sometimes I’m making tools that help other developers work smarter, sometimes I’m experimenting with prototypes that might turn into full games.",
             about_desc: "What fascinates me is how small mechanics can ripple into bigger experiences for players. That’s why I focus on modular, reusable systems. They let me experiment, iterate, and find fun in places I didn’t expect. My work lives where technical problem-solving meets playful creativity, and that’s exactly where I want to be.",
@@ -337,10 +339,12 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_platforms: "Multi-Platform"
         },
         tr: {
+            nav_reel: "Geliştirici Videosu",
             nav_about: "Hakkımda",
             nav_steam: "Steam Oyunları",
             nav_assets: "Unity Varlıkları",
             nav_itch: "Itch.io Oyunları",
+            reel_title: "Geliştirici Videosu",
             about_title: "Hakkımda",
             about_intro: "Ben Nima Peykarimeh. Sistemleri söküp, daha iyi nasıl inşa edilebileceklerini görmekten hoşlanıyorum. Unity benim oyun alanım. Bazen diğer geliştiricilerin daha akıllıca çalışmalarına yardımcı olan araçlar yapıyorum, bazen de tam bir oyuna dönüşebilecek prototiplerle denemeler yapıyorum.",
             about_desc: "Beni en çok heyecanlandıran şey, küçük mekaniklerin oyun deneyimini nasıl büyük ölçüde değiştirebileceğini görmek. Bu yüzden modüler ve tekrar kullanılabilir sistemler tasarlamayı tercih ediyorum. Böylece deniyor, değiştiriyor ve beklemediğim yerlerde eğlenceli sonuçlar keşfedebiliyorum. İşim teknik çözüm üretmekle yaratıcı fikirleri bir araya getirmek arasında, tam olarak orada olmayı seviyorum.",

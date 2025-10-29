@@ -22,6 +22,7 @@
                     <span class="bar"></span>
                 </button>
                 <ul class="nav-links" id="nav-links">
+                    <li><a href="#developer-reel" data-i18n="nav_reel">Developer Reel</a></li>
                     <li><a href="#about" data-i18n="nav_about">About Me</a></li>
                     <li><a href="#steam-games" data-i18n="nav_steam">Steam Games</a></li>
                     <li><a href="#unity-assets" data-i18n="nav_assets">Unity Assets</a></li>
@@ -31,11 +32,24 @@
         </div>
     </header>
 
-<section id="about" class="section-padding position-relative">
+<section id="developer-reel" class="section-padding position-relative">
     <!-- Particle background layer -->
     <div id="particles-js"></div>
 
   <!-- Actual content above -->
+  <div class="container">
+    <h2 class="section-title" data-i18n="reel_title">Developer Reel</h2>
+    
+    <!-- Developer Reel Video -->
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/1131832345?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Unity Developer Reel 2025"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-padding bg-dark-alt">
   <div class="container">
     <h2 class="section-title" data-i18n="about_title">About Me</h2>
     
@@ -149,6 +163,7 @@
             </div>
         </div>
     </footer>
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script src="particles.js"></script>
     <script src="script.js"></script>
 
