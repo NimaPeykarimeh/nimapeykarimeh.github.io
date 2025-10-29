@@ -339,12 +339,10 @@ document.addEventListener('DOMContentLoaded', () => {
             skill_platforms: "Multi-Platform"
         },
         tr: {
-            nav_reel: "Geliştirici Videosu",
             nav_about: "Hakkımda",
             nav_steam: "Steam Oyunları",
             nav_assets: "Unity Varlıkları",
             nav_itch: "Itch.io Oyunları",
-            reel_title: "Geliştirici Videosu",
             about_title: "Hakkımda",
             about_intro: "Ben Nima Peykarimeh. Sistemleri söküp, daha iyi nasıl inşa edilebileceklerini görmekten hoşlanıyorum. Unity benim oyun alanım. Bazen diğer geliştiricilerin daha akıllıca çalışmalarına yardımcı olan araçlar yapıyorum, bazen de tam bir oyuna dönüşebilecek prototiplerle denemeler yapıyorum.",
             about_desc: "Beni en çok heyecanlandıran şey, küçük mekaniklerin oyun deneyimini nasıl büyük ölçüde değiştirebileceğini görmek. Bu yüzden modüler ve tekrar kullanılabilir sistemler tasarlamayı tercih ediyorum. Böylece deniyor, değiştiriyor ve beklemediğim yerlerde eğlenceli sonuçlar keşfedebiliyorum. İşim teknik çözüm üretmekle yaratıcı fikirleri bir araya getirmek arasında, tam olarak orada olmayı seviyorum.",
@@ -394,10 +392,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set default language and generate content
     setLanguage('en');
 
-    // Particles.js initialization
-    particlesJS.load('particles-unity-assets', 'particles.json');
+    // Particles.js initialization - using default configuration
     particlesJS.load('particles-js', 'particles.json', function() {
-        console.log('particles.js loaded - callback');
+        console.log('particles.js loaded for About section');
+    });
+    particlesJS.load('particles-unity-assets', 'particles.json', function() {
+        console.log('particles.js loaded for Unity Assets');
     });
 
     // Hamburger menu toggle
