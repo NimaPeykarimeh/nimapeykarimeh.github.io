@@ -415,6 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('menu-open');
         });
     });
+    
     // // Optional: Close menu when clicking outside the panel
     // document.addEventListener('click', (e) => {
     //     if (
