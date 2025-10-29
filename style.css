@@ -817,6 +817,12 @@ a:hover {
         font-size: 0.8em;
     }
 
+    /* Video container responsive */
+    .video-container {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
     /* Adjusted for the new game-showcase structure */
     .game-showcase {
         gap: 40px; /* Adjusted gap for vertical stacking */
@@ -920,6 +926,13 @@ a:hover {
     .grid-item {
         padding: 20px;
     }
+    
+    /* Video container mobile */
+    .video-container {
+        padding: 8px;
+        border-radius: 8px;
+    }
+    
     .game-details  {
     padding: 20px;
     }
