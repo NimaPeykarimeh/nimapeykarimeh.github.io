@@ -255,7 +255,7 @@ a:hover {
 
 /* Video Container */
 .video-container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     background: rgba(114, 114, 114, 0.1);
     border-radius: 12px;
