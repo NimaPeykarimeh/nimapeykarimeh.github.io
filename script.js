@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr: "Akıcı hareket ve daha fazlasını içeren kapsamlı bir 2D platformer altyapısı."
             },
             assetUrl: "https://assetstore.unity.com/packages/slug/328245",
-            buttonText: { en: "Coming Soon", tr: "Yakında Geliyor" },
-            isActive: false
+            buttonText: { en: "View on Asset Store", tr: "Asset Store'da Görüntüle" },
+            isActive: true
         }
     ];
 
